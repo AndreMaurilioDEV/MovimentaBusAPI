@@ -20,7 +20,7 @@ app.post('/api/onibus', (req, res) => {
       totalPessoas: totalPessoas || 0,
       entradas: entradas || 0,
       saidas: saidas || 0,
-      timestamp: new Date().toLocaleString('pt-BR')
+      timestamp: Date.now()
     };
     
 

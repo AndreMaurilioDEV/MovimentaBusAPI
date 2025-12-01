@@ -202,7 +202,9 @@
                     const tabela = document.getElementById('tabelaHistorico');
                     tabela.innerHTML = historico.map(dado => `
                         <tr>
-                            <td>${dado.timestamp}</td>
+                            <td>${new Date(dado.timestamp).toLocaleString("pt-BR", {
+                            timeZone: "America/Sao_Paulo"
+                            })}</td>
                             <td>${dado.totalPessoas}</td>
                             <td>${dado.entradas}</td>
                             <td>${dado.saidas}</td>
